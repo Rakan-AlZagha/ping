@@ -20,10 +20,10 @@ for((i=1; i<=19; i++)) # loop all of netlab stations names
 do
     if [ ${#i} -eq 1 ] # if i is a single digit
     then
-        netStation=`echo netlab0$i.cs.trincoll.edu`
+        netStation=`echo {SERVERNAME}`
         stationStatus $netStation # call ping function to determine state
     else # if i is two or more digits
-        netStation=`echo netlab$i.cs.trincoll.edu`
+        netStation=`echo {SERVERNAME}`
         stationStatus $netStation # call ping function to determine state
     fi
 done
